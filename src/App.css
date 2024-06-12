@@ -1,0 +1,50 @@
+.container {
+  margin: 20px;
+}
+
+.phrase-frequency-box {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.phrase-frequency-scroll {
+  display: inline-block;
+  padding: 10px;
+}
+
+.phrase-frequency-scroll ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.phrase-frequency-scroll li {
+  margin-right: 20px;
+}
+
+.title {
+  font-weight: bold;
+  color: green;
+}
+
+.url {
+  font-weight: bold;
+  color: blue;
+}
+
+.description {
+  font-weight: bold;
+  color: green;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.results li {
+  margin-bottom: 10px;
+}
