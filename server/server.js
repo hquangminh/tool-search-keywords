@@ -18,8 +18,19 @@ app.get('/search', async (req, res) => {
     const page = await browser.newPage()
     await page.goto(`https://www.google.com/search?q=${query}`, { waitUntil: 'domcontentloaded' })
 
+    // Scroll to load more results
+    await page.evaluate(async () => {
+      let totalHeight = 0
+      let distance = 100
+      while (totalHeight < document.body.scrollHeight) {
+        window.scrollBy(0, distance)
+        totalHeight += distance
+        await new Promise((resolve) => setTimeout(resolve, 100))
+      }
+    })
+
     const results = await page.evaluate(() => {
-      const items = Array.from(document.querySelectorAll('.tF2Cxc')).slice(0, 10)
+      const items = Array.from(document.querySelectorAll('.tF2Cxc')).slice(0, 30) // Ensure we slice to 30
       return items.map((item) => ({
         title: item.querySelector('.DKV0Md')?.innerText || '',
         url: item.querySelector('.yuRUbf a')?.href || '',

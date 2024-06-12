@@ -25,6 +25,38 @@
   margin-right: 20px;
 }
 
+.columns-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.left-column {
+  width: 30%;
+  margin-right: 20px;
+}
+
+.right-column {
+  width: 70%;
+}
+
+.keywords-container {
+  margin-top: 20px;
+}
+
+.keywords-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.keywords-container li {
+  margin-bottom: 5px;
+}
+
+.keywords-container .highlight {
+  color: red;
+  font-weight: bold;
+}
+
 .title {
   font-weight: bold;
   color: green;
@@ -47,4 +79,34 @@ ul {
 
 .results li {
   margin-bottom: 10px;
+}
+.highlight {
+  background-color: yellow;
+}
+
+.selected-keywords-box {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.selected-keywords-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.selected-keywords-box ul li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.selected-keywords-box ul li button {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
 }
